@@ -1,0 +1,356 @@
+* {
+    box-sizing: border-box;
+}
+
+/* css global */
+/* un reset c'est quand tu veux annuler le sytle par défaut de certaines balises */
+ul {
+    /* permet d'enlever les listes à puces */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.border {
+    border: 1px solid black;
+}
+
+/* flex */
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-content-between {
+    justify-content:space-between;
+}
+
+.justify-content-center {
+    justify-content:center;
+}
+
+.justify-content-end {
+    justify-content:flex-end;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+} 
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* textes */
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+
+/* marges */
+
+.p1 {
+    padding: 1rem;
+}
+
+.p2 {
+    padding: 2rem;
+}
+
+/* tailles */
+
+.w-30 {
+    width: 30%;
+}
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+/* couleurs */
+
+.color-white {
+    color: white;
+}
+
+.color-red {
+    color: #fc4364;
+}
+
+.bg-blue-dark {
+    background: #003668;
+}
+
+.bg-violet {
+    background-color: #5e24c3;
+}
+
+.bg-red {
+    background-color: #fc4364;
+}
+
+.bg-grey {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.text-with-gradient {
+    background: linear-gradient(90deg, #1e8bff, #1e6955ff 45%, #a83af5 50%, #c03ada 75%);
+    word-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
+    /* préfixes vendeurs pour chrome */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* margins */
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.btn {
+    border-radius: 0.5rem;
+}
+
+.circle-icon {
+    height: 3rem;
+    width: 3rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-icon {
+    font-size: 2rem;
+}
+
+
+/* 
+
+/////// HEADER
+
+*/
+
+
+/* 
+
+/////// SECTION 1
+
+*/
+
+/* récupére le premier span immédiatement dans le H1 */
+h1 > span {
+    padding: 0.2rem;
+}
+
+#menu-burger {
+    height: 30px;
+    width: 30px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0, 1);
+    padding: 0.5rem;
+    display: none;
+}
+
+#menu-burger span {
+
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0,0,0, 1);;
+
+}
+
+/* 
+
+//////// SECTION 2
+
+*/
+
+#section2 ul li span:first-child {
+    font-size: 2rem;
+}
+
+#section2 ul li:nth-child(1) span:first-child {
+    color: red;
+}
+
+#section2 ul li:nth-child(2) span:first-child {
+    color: orange;
+}
+
+#section2 ul li:nth-child(3) span:first-child {
+    color: violet;
+}
+
+#section2 ul li:nth-child(4) span:first-child {
+    color: brown;
+}
+
+/*
+
+////// SECTION CARD
+
+*/
+
+.card img {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.card div {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.card-container {
+    padding: 1rem 0.5rem;
+}
+
+
+/* 
+
+/////// FOOTER
+
+*/
+
+footer {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+footer div ul li:first-child a {
+    font-weight: bold;
+}
+
+footer ul:last-child span:nth-child(2) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+
+/* MEDIA QUERY */
+
+/* le css ci-dessous ne s'appliquera que pour les tout petits écrans (phones) */
+@media only screen and (max-width:600px) {
+
+    header {
+        align-items: center;
+    }
+
+    #menu-burger {
+        display: flex;
+    }
+
+    #section2 {
+        display: none;
+    }
+
+    .info-container {
+        flex-wrap:wrap;
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer p {
+        text-align: center;
+    }
+    
+}
+
+/* le css s'appliquer pour tous les écrans faisant au moins 600px (tablettes et +) */
+@media only screen and (min-width:600px) {
+
+
+}
+
+
+/* les petits écrans : tablettes et téléphones */
+@media only screen and (max-width:767px) {
+
+    main section:first-of-type {
+        flex-wrap: wrap;
+    }
+
+    .card-container {
+        width: 100% !important;
+    }
+
+    nav {
+        display: none;
+    }
+
+
+}
+
+/* smartphones et tablettes paysage */
+@media only screen and (max-width:991px) {
+
+    .card-container {
+        width: 50%;
+    }
+
+    .w-50 {
+        width: 100%;
+    }
+
+
+
+}
+
+/* tablettes en mode paysage */
+@media only screen and (min-width:768px) and (max-width:991px) {
+
+    .card-container {
+        width:50%;
+    }
+
+}
+
+/* écran d'ordinateur de bureau */
+
+@media only screen and (min-width:992px) {
+
+    .card-container {
+        width: 30%;
+    }
+
+}
+
+/* écran d'ordinateur de bureau très grand */
+
+@media only screen and (min-width:1200px) {
+    
+}
